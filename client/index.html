@@ -4,17 +4,34 @@
     <meta charset="utf-8">
     <title>chatterbox</title>
     <link rel="stylesheet" href="styles/styles.css">
-
     <!-- dependencies -->
     <script src="bower_components/jquery/jquery.min.js"></script>
+    <script src="bower_components/underscore/underscore-min.js"></script>
     <!-- your scripts -->
     <script src="scripts/config.js"></script>
     <script src="scripts/app.js"></script>
   </head>
   <body>
     <div id="main">
-      <h1>chatterbox</h1>
+      <h1>chatterbox<em>box</em></h1>
       <!-- Your HTML goes here! -->
+      <div class="spinner"><img src="images/spiffygif_46x46.gif"></div>
+       <form action="#" id="send" method="post">
+         <input type="text" name="message" id="message"/>
+         <input type="submit" name="submit" class="submit"/>
+       </form>
+        <!--<form action="#" id="which_room" method="post">-->
+          <h3>Room name</h3>
+         <input type="text" name="room" id="room"/>
+         <button id="click">click</button>
+       <!--</form>-->
+       <div id="chats"></div>
+     </div>
+     <script>
+       $(function(){
+         app.init();
+       });
+     </script>
     </div>
   </body>
 </html>
